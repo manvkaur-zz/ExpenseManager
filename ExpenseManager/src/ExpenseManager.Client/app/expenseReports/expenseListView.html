@@ -1,0 +1,27 @@
+﻿<div class="panel panel-primary"
+     ng-controller="ExpenseListCtrl as vm">
+    <div class="panel-heading"
+         style="font-size:large">
+        Expense Reports
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <td>Report ID</td>
+                    <td>Purpose</td>
+                    <td>Date</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="report in vm.expenseReports">
+                    <td>{{ report.Id}}</td>
+                    <td>{{ report.Purpose }}</td>
+                    <td>{{ report.SubmitDate }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
